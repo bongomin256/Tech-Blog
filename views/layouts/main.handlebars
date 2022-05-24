@@ -7,6 +7,24 @@
     <title>The Tech Blog</title>
 </head>
 <body>
-    
+    <header>
+        <h1>The Tech Blog</h1>
+        <nav>
+           <a href="/">Home</a>
+           <a href="/">Dashboard</a>
+           {{#if logged_in}}
+           <a href="/">logout</a>
+           {{else}}
+           <a href="/">login</a>
+           {{/if}}
+
+        </nav>
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+        <h4>&copy; 2022</h4>
+    </footer>
 </body>
 </html>

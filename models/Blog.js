@@ -1,6 +1,5 @@
 // Importing all the dependencies
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class Blog extends Model {}

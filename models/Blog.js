@@ -36,3 +36,5 @@ Blog.init(
     modelName: "blog",
   }
 );
+
+module.exports = Blog;

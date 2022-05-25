@@ -1,0 +1,16 @@
+{{#each blogs as |blog| }}
+<section class="card">
+  <div class="card-header">
+      <div class="title">
+          <h2><a href="/blog/{{blog.id}}">{{blog.title}}</a></h2>
+      </div>
+      <div>
+          <p>posted by {{user.username}} on {{format_date blog.date_created}}</p>
+      </div>
+  </div>
+  <div class="card-body">
+      <p>{{blog.content}}</p>
+      <p>{{comment}}</p>
+  </div>
+</section>
+{{/each}}

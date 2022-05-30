@@ -1,14 +1,17 @@
-<section>
-    <form class="update-form">
+<section class="card">
+    <h3 class="card-header">Edit Post</h3>
+    <form class="update-form card-body">
         <div>
-            <label>Title</label>
-            <input name="blog-title" type="text" id="blog-title" ></input>
+            <label class="form-label">Title</label>
+            <input class="form-input" name="blog-title" type="text" id="blog-title" ></input>
         </div>
         <div>
-            <label>Content</label>
-            <textarea name="blog-content" type="text" id="blog-content"></textarea>
+            <label class="form-label">Content</label>
+            <textarea  class="form-textarea form-input" name="blog-content" type="text" id="blog-content"></textarea>
         </div>
-        <button class="btn" id="update">Update Post</button>
-        <button class="btn" id="delete">Delete</button>
+        <button type="submit" class="btn" id="update">Update Post</button>
+        <button type="submit" class="btn" id="delete">Delete</button>
     </form>
 </section>
+
+<script src="./public/JS/update.js"></script>

@@ -1,6 +1,6 @@
 {{#each blogs as |blog| }}
 <section class="card">
-  <div class="card-header">
+  <div class="card-header" id="title">
       <div class="title">
           <h2><a href="/blog/{{blog.id}}">{{blog.title}}</a></h2>
       </div>
@@ -10,7 +10,7 @@
   </div>
   <div class="card-body">
       <p>{{blog.content}}</p>
-      <p>{{comment}}</p>
+      {{!-- <p>{{comment}}</p> --}}
   </div>
 </section>
 {{/each}}

@@ -1,0 +1,17 @@
+[
+  {
+    "comment_text": "Just learnt this in my class",
+    "blog_id": 1,
+    "user_id": 3
+  },
+  {
+    "comment_text": "this isamazing",
+    "blog_id": 2,
+    "user_id": 1
+  },
+  {
+    "comment_text": "i love this",
+    "blog_id": 3,
+    "user_id": 2
+  }
+]

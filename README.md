@@ -64,7 +64,7 @@ Incase of any question[s] or suggestion[s] concerning this appication, please co
 ## Links
 
 - [Github app repo](https://github.com/bongomin256/Tech-Blog)
-- [Link to Heruko deployed app]()
+- [Link to Heruko deployed app](https://desolate-waters-20232.herokuapp.com/)
 
 ## Screenshots
 

@@ -19,6 +19,10 @@
     color: var(--dark);
     line-height: 1.5;
     font-size: 16px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom:0;
   }
         
         
@@ -41,11 +45,12 @@
           
 .card-body {
     padding: 1.5%;
+    
     }
 
-#login-form {
+/* #login-form {
   margin: 0 100px 20px 100px;
-}
+} */
 
 .btn {
         font-size: 1.3rem;
@@ -61,6 +66,13 @@
         background-color: var(--light-dark);
         box-shadow: 3px 3px var(--dark);
         transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+  color: var(--primary);
+  background-color: var(--tertiary);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
 }
 
     /* FORM */
@@ -99,7 +111,8 @@
 }
 
 .card-body p {
-  color: var(--primary);
+  /* color: black; */
+  color: var(--dark);
 
 }
 
@@ -114,6 +127,8 @@ header {
   margin-left: 0px;
   margin-right: 0px;
   color: var(--primary);
+  /* padding: 3% 4%; */
+  margin-bottom:4rem ;
 
 }
 
@@ -138,7 +153,97 @@ nav{
    color: var(--primary);
    margin: 1rem;
    font-size: 1.5rem;
-   border-left: 2px solid var(--primary);
-   border-right: 2px solid var(--primary);
+   /* border-left: 2px solid var(--primary);
+   border-right: 2px solid var(--primary); */
    padding: 5px;
+ }
+
+ .button {
+   background-color: red;
+   color: white;
+   border-radius: var(--border-radius);
+ }
+
+.button:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+ /* transition: ease-in; */
+
+}
+
+.btn-1:hover {
+ color: red;
+}
+
+
+ .flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+ }
+
+ .homepage {
+  margin-left: 5rem;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+ }
+
+
+ footer {
+   text-align: center;
+   margin-top: 5rem;
+   background-color: var(--dark);
+   color: var(--primary);  
+   
+ }
+
+ @media screen and (max-width: 480px) {
+  header,
+  nav {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+
+  body {
+    font-size: 10px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {
+  header,
+  nav {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+ }
+
+
+
+ @media screen and (min-width: 640px) {
+   /* header,
+   nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   } */
+ }
+
+ @media screen and (min-width: 992px) {
+  /* header,
+  nav {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  } */
+ }
+
+ @media screen and (min-width: 1200px) {
+  /* header,
+  nav {
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  } */
  }

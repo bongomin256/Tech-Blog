@@ -1,5 +1,6 @@
-<section>
-    {{#each }}
+{{#if blogs.length}}
+<section class="homepage">
+    {{#each blogs as |blog|}}
     <div class="card-header">
       <div class="title ">
           <h2><a href="/blog/{{blog.id}}">{{blog.title}}</a></h2>
@@ -8,13 +9,15 @@
           <p>posted by {{user.username}} on {{format_date blog.date_created}}</p>
       </div>
       <div class="btn">
-          <a href="/dashboard" class="update">Update</a>
+          <a href="/dashboard/update" class="update">Update</a>
           <a href="/dashboard" class="delete">Delete</a>
       </div>
    </div>
     {{/each}}
-
-    <div>
-        <button class="btn">+ New Post</button>
-    </div>
+    
 </section>
+{{/if}}
+<div class="homepage">
+    <button onclick="location.href = '/newBlog';" class="btn">+ New Post</button>
+</div>
+

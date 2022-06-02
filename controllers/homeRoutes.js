@@ -92,6 +92,7 @@ router.get("/dashboard", withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render("dashboard", {
       ...user,
@@ -144,4 +145,74 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+router.get("/signup", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect("/dashboard");
+    return;
+  }
+
+  res.render("signup");
+});
+
+router.get("/logout", (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+    res.redirect("homepage");
+    return;
+  }
+
+  res.render("logout");
+});
+
+router.get("/blog/:id/comment", async (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  // if (req.session.logged_in) {
+  //   res.render("comment");
+  //   return;
+  // }
+
+  // res.render("login");
+
+  try {
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ["username"],
+        },
+        {
+          model: Comment,
+          attributes: [
+            "id",
+            "comment_text",
+            "blog_id",
+            "user_id",
+            "created_at",
+          ],
+          include: {
+            model: User,
+            attributes: ["username"],
+          },
+        },
+      ],
+    });
+
+    if (!blogData) {
+      res.status(404).json({ message: "No blog found with this id" });
+      return;
+    }
+
+    //  Serializing the data
+    const blog = blogData.get({ plain: true });
+    console.log(blog);
+
+    res.render("comment", {
+      ...blog,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 module.exports = router;
